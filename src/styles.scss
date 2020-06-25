@@ -12,11 +12,11 @@
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$absa-test-primary: mat-palette($mat-indigo);
-$absa-test-accent: mat-palette($mat-pink, A200, A100, A400);
+$absa-test-primary: mat-palette($mat-red);
+$absa-test-accent: mat-palette($mat-grey, A200, A100, A400);
 
 // The warn palette is optional (defaults to red).
-$absa-test-warn: mat-palette($mat-red);
+$absa-test-warn: mat-palette($mat-lime);
 
 // Create the theme object (a Sass map containing all of the palettes).
 $absa-test-theme: mat-light-theme($absa-test-primary, $absa-test-accent, $absa-test-warn);
@@ -25,6 +25,10 @@ $absa-test-theme: mat-light-theme($absa-test-primary, $absa-test-accent, $absa-t
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
 @include angular-material-theme($absa-test-theme);
+
+$primary: mat-color($absa-test-primary);
+$accent: mat-color($absa-test-accent);
+$warn: mat-color($absa-test-warn);
 
 /* You can add global styles to this file, and also import other style files */
 
