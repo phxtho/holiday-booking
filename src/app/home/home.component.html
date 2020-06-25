@@ -1,0 +1,108 @@
+<mat-tab-group mat-align-tabs="start" dynamicHeight="true">
+    <mat-tab id="tabs">
+        <ng-template mat-tab-label class="tab-label">
+            <i class="fa fa-plane"></i>
+            Flights
+        </ng-template>
+        <div class="tab-content">
+            <form class="col tab-form">
+                <div class="row form-row">
+                    <h1>Book your Flight</h1>
+
+                    <mat-button-toggle-group name="fontStyle">
+                        <mat-button-toggle value="domestic">Domestic</mat-button-toggle>
+                        <mat-button-toggle value="international">International</mat-button-toggle>
+                    </mat-button-toggle-group>
+                </div>
+                <div class="row form-row">
+                    <div class="col lg-col">
+                        <label for="fromLocation">From</label>
+                        <input matInput type="text" 
+                            placeholder="E.g Melbourn, Australia" 
+                            class="form-control" 
+                            id="fromLocation" 
+                            required
+                            [(ngModel)]="flightPlan.depatureLocation"
+                            name="depatureLocation"
+                            >
+                    </div>
+
+                    <div class="col lg-col">
+                        <label for="toLocation">To</label>
+                        <input type="text" 
+                            placeholder="E.g New York, United States" 
+                            class="form-control" 
+                            id="toLocation" 
+                            required
+                            [(ngModel)]="flightPlan.destinationLocation"
+                            name="destinationLocation"
+                            >
+                    </div>
+                </div>
+                <div class="row form-row">
+                    <div class="col md-col">
+                        <label for="depatureDate">Depature</label>
+                        <input type="date" 
+                            class="form-control" 
+                            id="depatureDate" 
+                            required
+                            [(ngModel)]="flightPlan.depatureDate"
+                            name="depatureDate"
+                            >
+                    </div>
+
+                    <div class="col md-col">
+                        <label for="returnDate">Return</label>
+                        <input type="date" 
+                                class="form-control" 
+                                id="returnDate" 
+                                required
+                                [(ngModel)]="flightPlan.returnDate"
+                                name="returnDate"
+                                >
+                    </div>
+
+                    <div class="col sm-col">
+                        <label for="adults">Adults</label>
+                        <input type="number" 
+                            placeholder="2" 
+                            class="form-control" 
+                            id="adults" 
+                            required
+                            [(ngModel)]="flightPlan.adultCount"
+                            name="adultCount"
+                            >
+                    </div>
+                </div>
+                <div class="row form-row">
+                    <button mat-flat-button 
+                            color="primary" 
+                            type="submit">Search Flights</button>
+
+                    <button mat-button class="link-btn"> Advanced Search</button>
+                </div>
+               
+           </form>
+        </div>
+    </mat-tab>
+    <mat-tab>
+        <ng-template mat-tab-label>
+            <i class="fa fa-building"></i>
+            Hotels
+        </ng-template>
+        <div class="tab-content"></div>
+    </mat-tab>
+    <mat-tab>
+        <ng-template mat-tab-label>
+            <span>Flights+Hotels</span>
+        </ng-template>
+        <div class="tab-content"></div>
+    </mat-tab>
+    <mat-tab>
+        <ng-template mat-tab-label>
+            <i class="fa fa-gift"></i>
+            <span>Holidays</span>
+        </ng-template>
+        <div class="tab-content"></div>
+    </mat-tab>
+</mat-tab-group>

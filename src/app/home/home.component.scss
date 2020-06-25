@@ -1,0 +1,120 @@
+@import "src/styles.scss";
+
+.tab-content {
+    background-color: rgba($color: white, $alpha: .85);
+}
+
+.tab-form{
+    padding: 15px 35px 15px 35px;
+
+    h1{
+        text-transform: uppercase;
+        margin-bottom: 0px;
+    }
+
+    label{
+        text-transform: uppercase;
+    }
+
+    input {
+        height: 30px;
+        border-radius: 2px;
+        border-color: rgba(0,0,0,0.15);
+    }
+    
+}
+
+.form-row {
+    padding: 10px 0px 10px 0px ;
+    justify-content: space-between;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+}
+
+.col{
+    display: flex;
+    flex-direction: column;
+
+    label{
+        padding-bottom: 5px;
+    }
+}
+
+
+.mat-tab-group{
+    width: 65%;
+
+    ::ng-deep .mat-tab-label{
+        min-width: 0px;
+        padding: 0px 20px 0px 20px;
+        color: white;
+        background-color: #544E5C;
+        opacity: 1;
+
+        i{
+            padding: 5px;
+        }
+    }
+
+    ::ng-deep .mat-tab-label-active{
+        background-color: $primary;
+    }
+
+    ::ng-deep .mat-tab-header{
+        border-bottom: 3px solid $primary;
+    }
+}
+
+.mat-flat-button{
+    text-transform: uppercase;
+    border-radius: 2px;
+}
+
+::ng-deep .mat-button-toggle-group{
+    height: 30px;
+
+    .mat-button-toggle-appearance-standard .mat-button-toggle-label-content{
+        line-height: inherit;
+    }
+
+    .mat-button-toggle-button {
+        height: 100%;
+    }
+
+    .mat-button-toggle-checked{
+        color: white !important;
+        background-color: $primary;
+    }
+}
+
+.link-btn{
+    text-decoration: underline;
+    font-style: italic;
+}
+
+input::-webkit-calendar-picker-indicator{
+    display: none;
+}
+
+input[type="date"]{
+    text-transform: uppercase;
+}
+
+.lg-col{
+    width: 45%;
+}
+
+.md-col{
+    width: 35%;
+}
+
+.sm-col {
+    width: 20%;
+}
+
+@media screen and (max-width: 600px) {
+
+}
