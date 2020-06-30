@@ -12,23 +12,23 @@
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$absa-test-primary: mat-palette($mat-red);
-$absa-test-accent: mat-palette($mat-grey, A200, A100, A400);
+$holiday-booking-primary: mat-palette($mat-red);
+$holiday-booking-accent: mat-palette($mat-grey, A200, A100, A400);
 
 // The warn palette is optional (defaults to red).
-$absa-test-warn: mat-palette($mat-lime);
+$holiday-booking-warn: mat-palette($mat-lime);
 
 // Create the theme object (a Sass map containing all of the palettes).
-$absa-test-theme: mat-light-theme($absa-test-primary, $absa-test-accent, $absa-test-warn);
+$holiday-booking-theme: mat-light-theme($holiday-booking-primary, $holiday-booking-accent, $holiday-booking-warn);
 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
-@include angular-material-theme($absa-test-theme);
+@include angular-material-theme($holiday-booking-theme);
 
-$primary: mat-color($absa-test-primary);
-$accent: mat-color($absa-test-accent);
-$warn: mat-color($absa-test-warn);
+$primary: mat-color($holiday-booking-primary);
+$accent: mat-color($holiday-booking-accent);
+$warn: mat-color($holiday-booking-warn);
 
 /* You can add global styles to this file, and also import other style files */
 

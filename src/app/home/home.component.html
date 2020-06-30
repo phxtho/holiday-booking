@@ -5,7 +5,7 @@
             Flights
         </ng-template>
         <div class="tab-content">
-            <form class="col tab-form">
+            <form #flightplanForm="ngForm" class="col tab-form">
                 <div class="row form-row">
                     <h1>Book your Flight</h1>
 
@@ -76,7 +76,8 @@
                 </div>
                 <div class="row form-row">
                     <button mat-flat-button 
-                            color="primary" 
+                            color="primary"
+                             (click) = "onSubmit()"
                             type="submit">Search Flights</button>
 
                     <button mat-button class="link-btn"> Advanced Search</button>
