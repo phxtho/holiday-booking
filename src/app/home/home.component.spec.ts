@@ -22,4 +22,13 @@ describe('HomeComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it(`should have as submitted 'false' on initialisation`, () => {
+    expect(component.submitted).toEqual(false);
+  });
+
+  it(`should have as submitted 'true' after submission`, () => {
+    component.onSubmit();
+    expect(component.submitted).toEqual(true);
+  });
 });

@@ -10,12 +10,12 @@ import { FlightPlan } from 'src/app/shared/models/flight-plan';
 export class HomeComponent implements OnInit {
 
   flightPlan = new FlightPlan();
-  submitted : boolean;
+  submitted : boolean = false;
 
   constructor() {}
 
   ngOnInit(): void {
-    this.submitted = false;
+    
   }
 
   onSubmit() {
